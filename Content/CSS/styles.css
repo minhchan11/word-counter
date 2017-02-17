@@ -1,0 +1,13 @@
+#word, #sentence{
+  font-size: 30px;
+  padding: 5px;
+  margin-right:5px;
+  margin-left:5px;
+  background-color: #e6ebf4;
+  border-radius: 12px 12px 12px 12px;
+}
+
+.userForm {
+  padding-left: 15px;
+  padding-right: 15px;
+}

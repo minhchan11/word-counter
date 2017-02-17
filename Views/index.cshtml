@@ -1,0 +1,27 @@
+@{
+  Layout = "Shared/_Layout.cshtml";
+}
+<h1>Word Counter</h1>
+
+<div class="panel panel-info">
+  <div class="panel-heading">Enter your word and your sentence</div>
+  <div class="panel-body">
+    <div class="userForm">
+      <form action="/result" method="post">
+        <div class="form-group row">
+        <label for="word" class="col-2 col-form-label">Word:</label>
+        <div class="col-10">
+          <input class="form-control" type="text" id="word" name="word">
+        </div>
+      </div>
+        <div class="form-group row">
+        <label for="sentence" class="col-2 col-form-label">Sentence:</label>
+        <div class="col-10">
+          <input class="form-control" type="text" id="sentence" name="sentence">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="submit" class = "btn btn-large btn-success">Submit</button>
+</form>

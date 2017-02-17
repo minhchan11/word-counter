@@ -1,0 +1,10 @@
+@{
+  Layout = "Shared/_Layout.cshtml";
+}
+<h2>Your Word count result</h2>
+<div class="well">
+  <h4>Your Word <span id="word"> " @Model["userWord"] "</span> has appeared in your sentence <span id="sentence"> " @Model["userSentence"] " </span>   as following:</h4>
+  <h5>Full Match: @Model["fullResult"] times </h5>
+  <h5>Partial Match: @Model["partialResult"] times </h5>
+</div>
+<a href="/">Make another word count</a>

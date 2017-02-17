@@ -48,11 +48,11 @@ namespace WordCounter.Objects
 
     //Count the number of time word is contained in string, with no case sensitivity
     [Fact]
-    public void CountRepeats_WordPresent_OneTime()
+    public void CountRepeatsFull_WordPresent_OneTime()
     {
       // Arrange
-      RepeatCounter testRepeat = new RepeatCounter("cat","cathedral");
-      int timesRepeat = testRepeat.CountRepeats();
+      RepeatCounter testRepeat = new RepeatCounter("cat","cat");
+      int timesRepeat = testRepeat.CountRepeatsFull();
       // Act
       int verifyTimes = 1;
       // Assert
@@ -61,16 +61,67 @@ namespace WordCounter.Objects
 
     //Count the number of time word is contained in string, with no case sensitivity
     [Fact]
-    public void CountRepeats_WordPresent_ManyTimes()
+    public void CountRepeatsFull_ManyWordPresent_OneTime()
     {
       // Arrange
-      RepeatCounter testRepeat = new RepeatCounter("cat","I brought my cat to the cathedral in a cathouse");
-      int timesRepeat = testRepeat.CountRepeats();
+      RepeatCounter testRepeat = new RepeatCounter("cat","cat cat cat");
+      int timesRepeat = testRepeat.CountRepeatsFull();
       // Act
       int verifyTimes = 3;
       // Assert
       Assert.Equal(verifyTimes,timesRepeat);
     }
 
+    //Count the number of time word is contained in string, with case sensitivity
+    [Fact]
+    public void CountRepeatsFull_ManyCapitalWordPresent_OneTime()
+    {
+      // Arrange
+      RepeatCounter testRepeat = new RepeatCounter("cAt","CAT CAT cat");
+      int timesRepeat = testRepeat.CountRepeatsFull();
+      // Act
+      int verifyTimes = 3;
+      // Assert
+      Assert.Equal(verifyTimes,timesRepeat);
+    }
+
+    //Count the number of time word is contained in string, with no case sensitivity
+    [Fact]
+    public void CountRepeatsPartial_WordPresent_OneTime()
+    {
+      // Arrange
+      RepeatCounter testRepeat = new RepeatCounter("cat","cathedral");
+      int timesRepeat = testRepeat.CountRepeatsPartial();
+      // Act
+      int verifyTimes = 1;
+      // Assert
+      Assert.Equal(verifyTimes,timesRepeat);
+    }
+
+    //Count the number of time word is contained in string, with no case sensitivity
+    [Fact]
+    public void CountRepeatsPartial_WordPresent_ManyTimes()
+    {
+      // Arrange
+      RepeatCounter testRepeat = new RepeatCounter("cat","I brought my cat to the cathedral in a cathouse");
+      int timesRepeat = testRepeat.CountRepeatsPartial();
+      // Act
+      int verifyTimes = 3;
+      // Assert
+      Assert.Equal(verifyTimes,timesRepeat);
+    }
+
+    //Count the number of time word is contained in string, with case sensitivity
+    [Fact]
+    public void CountRepeatsPartial_CapitalWordPresent_ManyTimes()
+    {
+      // Arrange
+      RepeatCounter testRepeat = new RepeatCounter("cat","I brought my CaT to the cAThedral in a CAThouse");
+      int timesRepeat = testRepeat.CountRepeatsPartial();
+      // Act
+      int verifyTimes = 3;
+      // Assert
+      Assert.Equal(verifyTimes,timesRepeat);
+    }
   }
 }
