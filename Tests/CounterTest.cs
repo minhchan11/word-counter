@@ -59,15 +59,15 @@ namespace WordCounter.Objects
       Assert.Equal(verifyTimes,timesRepeat);
     }
 
-    //Count the number of time word is not contained in string, with no case sensitivity
+    //Count the number of time word is contained in string, with no case sensitivity
     [Fact]
-    public void CountRepeats_WordPresent_NoTime()
+    public void CountRepeats_WordPresent_ManyTimes()
     {
       // Arrange
-      RepeatCounter testRepeat = new RepeatCounter("dog","cathedral");
+      RepeatCounter testRepeat = new RepeatCounter("cat","I brought my cat to the cathedral in a cathouse");
       int timesRepeat = testRepeat.CountRepeats();
       // Act
-      int verifyTimes = 0;
+      int verifyTimes = 3;
       // Assert
       Assert.Equal(verifyTimes,timesRepeat);
     }

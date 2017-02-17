@@ -9,7 +9,6 @@ namespace WordCounter.Objects
     private string _word;
     private string _inputString;
 
-
     //Make constructor
     public RepeatCounter(string word, string inputString)
     {
@@ -29,10 +28,15 @@ namespace WordCounter.Objects
     public int CountRepeats()
     {
       int _counter = 0;
-      if (_inputString.Contains(_word))
+      do
       {
-        _counter +=1;
+        int removeAt = _inputString.IndexOf(_word);
+        int wordLength = _word.Length;
+        _inputString = _inputString.Remove(removeAt,wordLength);
+        _counter++;
+        Console.WriteLine(_counter);
       }
+      while(_inputString.Contains(_word));
       return _counter;
     }
   }
