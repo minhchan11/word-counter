@@ -31,7 +31,7 @@ namespace WordCounter.Objects
     public void ContainsWord_CapitalizedWordPresent_true()
     {
       // Arrange
-      RepeatCounter testRepeat = new RepeatCounter("CaT","cAThedral");
+      RepeatCounter testRepeat = new RepeatCounter("CaT","my caT is in a cAThedral");
       // Assert
       Assert.Equal(true, testRepeat.ContainsWord());
     }
@@ -44,6 +44,19 @@ namespace WordCounter.Objects
       RepeatCounter testRepeat = new RepeatCounter("Dog","cAThedral");
       // Assert
       Assert.Equal(false, testRepeat.ContainsWord());
+    }
+
+    //Count the number of time word is contained in string, with no case sensitivity
+    [Fact]
+    public void CountRepeats_WordPresent_OneTime()
+    {
+      // Arrange
+      RepeatCounter testRepeat = new RepeatCounter("cat","cathedral");
+      int timesRepeat = testRepeat.CountRepeats();
+      // Act
+      int verifyTimes = 1;
+      // Assert
+      Assert.Equal(verifyTimes,timesRepeat);
     }
 
   }
