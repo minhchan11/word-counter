@@ -28,15 +28,16 @@ namespace WordCounter.Objects
     public int CountRepeats()
     {
       int _counter = 0;
+      string convertedWord = _word.ToLower();
+      string convertedString = _inputString.ToLower();
       do
       {
-        int removeAt = _inputString.IndexOf(_word);
-        int wordLength = _word.Length;
-        _inputString = _inputString.Remove(removeAt,wordLength);
+        int removeAt = convertedString.IndexOf(convertedWord);
+        int wordLength = convertedWord.Length;
+        convertedString = convertedString.Remove(removeAt,wordLength);
         _counter++;
-        Console.WriteLine(_counter);
       }
-      while(_inputString.Contains(_word));
+      while(convertedString.Contains(convertedWord));
       return _counter;
     }
   }
