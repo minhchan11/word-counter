@@ -36,5 +36,15 @@ namespace WordCounter.Objects
       Assert.Equal(true, testRepeat.ContainsWord());
     }
 
+    //Assert false in case word is not contained in string, now with case insensitivity
+    [Fact]
+    public void ContainsWord_CapitalizedWordPresent_false()
+    {
+      // Arrange
+      RepeatCounter testRepeat = new RepeatCounter("Dog","cAThedral");
+      // Assert
+      Assert.Equal(false, testRepeat.ContainsWord());
+    }
+
   }
 }
