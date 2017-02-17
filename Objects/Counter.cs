@@ -19,7 +19,9 @@ namespace WordCounter.Objects
     // Make boolean method to see if string contains substring
     public bool ContainsWord()
     {
-     return _inputString.Contains(_word);
+     string convertedWord = _word.ToLower();
+     string convertedString = _inputString.ToLower();
+     return convertedString.Contains(convertedWord);
     }
   }
 }
