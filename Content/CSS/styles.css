@@ -8,7 +8,7 @@ body {
     position: absolute;
     border: 5px solid #1086e8;
     width: 300px;
-    top: 150px;
+    top: 10%;
     border-radius: 20px;
     left: 50%;
     margin: -50px 0 0 -150px;
@@ -17,10 +17,10 @@ body {
 
 .content {
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 400px;
+    left: 35%;
     border: 5px solid #1086e8;
-    width: 700px;
+    width: 50%;
     height: 550px;
     padding-top: 5%;
     margin-bottom: 20%;
@@ -31,13 +31,13 @@ body {
 }
 
 .prompt {
-  position: absolute;
- top: 40%;
- left: 37%;
- color: #9af5f9;
- font-size: 30px;
-font-family: 'Raleway', sans-serif;
-text-transform: uppercase;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: #9af5f9;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
 }
 
 .userForm {
@@ -71,51 +71,51 @@ input[type="text"] {
 }
 
 .btn {
-  -webkit-border-radius: 23;
-  -moz-border-radius: 23;
-  border-radius: 23px;
-  color: #9af5f9;
-  font-size: 49px;
-  background: #fab7ff;
-  padding: 11px 40px 10px 40px;
-  text-decoration: none;
- margin-left: 35%;
- margin-top: 10%;
- font-family: 'Raleway', sans-serif;
+    -webkit-border-radius: 23;
+    -moz-border-radius: 23;
+    border-radius: 23px;
+    color: #9af5f9;
+    font-size: 49px;
+    background: #fab7ff;
+    padding: 11px 40px 10px 40px;
+    text-decoration: none;
+    margin-left: 35%;
+    margin-top: 10%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .btn:hover {
-  background: #b2fff8;
-  text-decoration: none;
-  color: #fab7ff;
+    background: #b2fff8;
+    text-decoration: none;
+    color: #fab7ff;
 }
 
 .btn2 {
-  -webkit-border-radius: 23;
-  -moz-border-radius: 23;
-  border-radius: 23px;
-  color: #9af5f9;
-  font-size: 49px;
-  background: #fab7ff;
-  padding: 11px 40px 10px 40px;
-  text-decoration: none;
- margin-left: 23%;
- margin-top: 10%;
- font-family: 'Raleway', sans-serif;
+    -webkit-border-radius: 23;
+    -moz-border-radius: 23;
+    border-radius: 23px;
+    color: #9af5f9;
+    font-size: 49px;
+    background: #fab7ff;
+    padding: 11px 40px 10px 40px;
+    text-decoration: none;
+    margin-left: 23%;
+    margin-top: 10%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .btn2:hover {
-  background: #b2fff8;
-  text-decoration: none;
-  color: #fab7ff;
+    background: #b2fff8;
+    text-decoration: none;
+    color: #fab7ff;
 }
 
-.highlight{
-  background: rgba(252, 17, 252, 0.5);
-  border-radius: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
+.highlight {
+    background: rgba(252, 17, 252, 0.5);
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 h3 {
