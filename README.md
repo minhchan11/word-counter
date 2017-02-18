@@ -62,7 +62,7 @@ Contact me at mphuong@kent.edu.
 
 ## Technologies Used
 
-HTML, CSS, Bootstrap, C#, Nancy, Razor.
+HTML, CSS, C#, Nancy, Razor.
 
 ### License
 
