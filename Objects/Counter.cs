@@ -28,14 +28,16 @@ namespace WordCounter.Objects
     public int CountRepeatsFull()
     {
       int _counter = 0;
-      string[] splitInput = _inputString.ToLower().Split(' ');
-      foreach (string splits in splitInput)
-      {
-        if(splits == _word.ToLower())
+      string convertedWord = _word.ToLower();
+      string convertedString = _inputString.ToLower();
+        string[] splitInput = convertedString.Split(' ');
+        foreach (string splits in splitInput)
         {
-          _counter++;
+          if(splits == convertedWord.ToLower())
+          {
+            _counter++;
+          };
         };
-      };
       return _counter;
     }
 
@@ -45,14 +47,21 @@ namespace WordCounter.Objects
       int _counter = 0;
       string convertedWord = _word.ToLower();
       string convertedString = _inputString.ToLower();
-      do
+      if (convertedString.Contains(convertedWord) == true)
       {
-        int removeAt = convertedString.IndexOf(convertedWord);
-        int wordLength = convertedWord.Length;
-        convertedString = convertedString.Remove(removeAt,wordLength);
-        _counter++;
+        do
+        {
+          int removeAt = convertedString.IndexOf(convertedWord);
+          int wordLength = convertedWord.Length;
+          convertedString = convertedString.Remove(removeAt,wordLength);
+          _counter++;
+        }
+        while(convertedString.Contains(convertedWord));
       }
-      while(convertedString.Contains(convertedWord));
+      else
+      {
+        _counter = 0;
+      }
       return _counter;
     }
   }
