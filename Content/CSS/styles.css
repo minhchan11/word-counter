@@ -82,6 +82,7 @@ input[type="text"] {
     margin-left: 35%;
     margin-top: 10%;
     font-family: 'Raleway', sans-serif;
+    border: none;
 }
 
 .btn:hover {
@@ -102,6 +103,7 @@ input[type="text"] {
     margin-left: 23%;
     margin-top: 10%;
     font-family: 'Raleway', sans-serif;
+    border: none;
 }
 
 .btn2:hover {
